@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 
-class NameBar extends Component { 
+export default class NameBar extends Component { 
     constructor (props) { 
         super(props);
+
+        this.state = { 
+            name: this.props.name,
+        }
     }
 
     render () { 
@@ -13,5 +17,3 @@ class NameBar extends Component {
         )
     }
 }
-
-export default NameBar;

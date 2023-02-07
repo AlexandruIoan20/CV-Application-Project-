@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Form from "./form.jsx";
+import Editor from "./editor.jsx";
 
 export class Overview extends Component { 
     constructor (props) { 
@@ -11,7 +12,7 @@ export class Overview extends Component {
     }    
 
     render () { 
-        const { informations, onDelete, onEditInfo, onAddInfo, onShowEdit } = this.props;
+        const { informations, onDelete, onEditInfo, onShowEdit } = this.props;
         console.log(informations);
         return ( 
             <section>
@@ -21,7 +22,13 @@ export class Overview extends Component {
                     <button onClick={ () => onDelete (info.id) }>Delete</button>
                     <button onClick={ () => onShowEdit(info)}>Edit</button>
 
-{/*                     <button onClick={ () => onEdit(info, document.getElementById("info-field-input"))}>Edit</button> */}
+                    { info.showEdit && 
+                        <Editor clForm = 'info-field-form'
+                        clInput = 'info-field-input'
+                        clButton = 'info-field-button'
+                        onEditInfo = { onEditInfo }
+                        info = {info}/>
+                    }
                     </article>
                 )}
             </section>

@@ -72,7 +72,6 @@ export class InfoFiledMultiple extends Component {
             ...this.state, mainShowEdit
         })
     }
-
     addMainInfoHandler = () => { 
         const informations = this.state.informations;
         const input = document.getElementById("info-field-input").value;
@@ -98,7 +97,8 @@ export class InfoFiledMultiple extends Component {
         const index = informations.indexOf(info);
 
         informations[index].text = text; 
-        this.setState( {...this.state, informations});
+        informations[index].showEdit = false;
+        this.setState( {informations});
     }
 
     render() { 
