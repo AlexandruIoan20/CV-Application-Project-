@@ -5,6 +5,7 @@ import ContactSection from './composed_components/contact.jsx';
 import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';
 import ExperienceSection from './composed_components/experience.jsx';
+import IntroSection from './composed_components/introduction.jsx';
 
 export default class App extends Component { 
   constructor (props) { 
@@ -14,7 +15,7 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
-        <ExperienceSection/> 
+        <IntroSection/> 
       </section>  
     )
   }
