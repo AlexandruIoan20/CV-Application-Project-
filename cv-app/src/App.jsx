@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import InfoField from './components/infoField.jsx';
-import { InfoFieldMultiple } from './components/infoField.jsx';
-
-
+import ImageGenerator from './components/imageGenerator.jsx';
 
 export default class App extends Component { 
   constructor (props) { 
@@ -12,7 +9,7 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
-        <InfoFieldMultiple />
+        <ImageGenerator/>
       </section>  
     )
   }
