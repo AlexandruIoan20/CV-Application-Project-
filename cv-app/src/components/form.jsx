@@ -6,7 +6,7 @@ export default class Form extends Component {
     }
 
     render () { 
-        const { onEditInfo, clForm, clInput, clButton, onAddInfo } = this.props;
+        const { clForm, clInput, clButton, onAddInfo } = this.props;
         return( 
             <form className= { clForm }>
                 <input type="text" className= { clInput } id = { clInput } />
@@ -14,10 +14,6 @@ export default class Form extends Component {
                     onClick = { () =>  onAddInfo(document.getElementById('info-field-input').value) } 
                     type="reset" 
                     className={ clButton }> Submit </button>
-
-                <button
-                    type="reset"
-                    className= {clButton} ></button>
             </form>
         )
     }

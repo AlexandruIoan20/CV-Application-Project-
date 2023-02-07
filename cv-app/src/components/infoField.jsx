@@ -76,9 +76,10 @@ export class InfoFiledMultiple extends Component {
     addMainInfoHandler = () => { 
         const informations = this.state.informations;
         const input = document.getElementById("info-field-input").value;
+        const mainShowEdit = !this.state.mainShowEdit;
 
         informations.push( {id: informations.length + 1, text: input, showEdit: false});
-        this.setState( { ...this.state, informations});
+        this.setState( { ...this.state, informations, mainShowEdit});
     }
 
     handleDelete = (counterID) => { 
@@ -115,8 +116,7 @@ export class InfoFiledMultiple extends Component {
                 {mainShowEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
-                    onAddInfo =  { this.addMainInfoHandler }
-                    onEditInfo =  { this.handleDelete } /> }   
+                    onAddInfo = { this.addMainInfoHandler } />  }   
             </div>
         )
     }

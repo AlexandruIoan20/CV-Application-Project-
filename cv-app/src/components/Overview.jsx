@@ -21,16 +21,6 @@ export class Overview extends Component {
                     <button onClick={ () => onDelete (info.id) }>Delete</button>
                     <button onClick={ () => onShowEdit(info)}>Edit</button>
 
-                    { 
-                        info.showEdit && (
-                            <Form clForm = 'info-field-form'
-                                clInput = 'info-field-input'
-                                clButton = 'info-field-button'
-                                onAddInfo =  { onAddInfo }
-                                onEditInfo =  { onEditInfo }  /> 
-                        ) 
-                    }
-
 {/*                     <button onClick={ () => onEdit(info, document.getElementById("info-field-input"))}>Edit</button> */}
                     </article>
                 )}
