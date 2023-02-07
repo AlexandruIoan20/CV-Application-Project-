@@ -12,12 +12,17 @@ export default class InfoField extends Component {
         }
     }
 
-    addInfoHandler = () => { 
-        const input = document.getElementById('info-field-input').value;
-        
+    editInfoHandler = (text) => { 
         this.setState( { 
-            info: <p> { input }</p>,
+            info: <p> { text }</p>,
             showEdit: false,
+        })
+    }
+
+    showEditHandler = () =>  {  
+        const showEdit = !this.state.showEdit
+        this.setState( { 
+            ...this.state, showEdit
         })
     }
 
@@ -26,12 +31,11 @@ export default class InfoField extends Component {
             <section>
                <NameBar name='Field'/> 
                 <span> { this.state.info  }</span>
-                <Form clForm = 'info-field-form'
-                    forForm = 'From props(still working)'
+                <button onClick= {this.showEditHandler}>Edit</button>
+                {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
-                    clLabel = 'info-field-label'
                     clButton = 'info-field-button'
-                    onAddInfo =  { this.addInfoHandler } /> 
+                    onEditInfo =  { this.editInfoHandler } /> } 
             </section>
         )
     }

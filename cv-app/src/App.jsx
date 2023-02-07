@@ -12,6 +12,9 @@ export default class App extends Component {
     return ( 
       <section className='container'>
         <InfoField/>
+        <InfoField/>
+        <InfoField/>
+        <InfoField/>
       </section>
     )
   }
