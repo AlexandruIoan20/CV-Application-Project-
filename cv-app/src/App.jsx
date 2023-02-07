@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InfoField from './components/infoField.jsx';
+import { InfoFiledMultiple } from './components/infoField.jsx';
 
 
 
@@ -11,10 +12,7 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
-        <InfoField/>
-        <InfoField/>
-        <InfoField/>
-        <InfoField/>
+        <InfoFiledMultiple />
       </section>
     )
   }
