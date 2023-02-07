@@ -1,0 +1,33 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    background-color: #E0E1DD;
+}
+
+.container, .root { 
+    height: 100vh;
+    background-color: #E0E1DD;
+}
+
+.section-namebar { 
+    margin: 0.5em;
+    padding: 0.5em;
+
+    background-color: #0D1B2A;
+    color: white;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    display: flex;
+    column-gap: 1em;
+
+    border-radius: 5px;
+}
+
+.info-field-button { 
+    background-color: red;
+}

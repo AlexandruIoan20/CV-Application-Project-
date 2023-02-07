@@ -30,9 +30,9 @@ export default class InfoField extends Component {
     render () { 
         return( 
             <section>
-               <NameBar name= {this.props.name}/> 
+               <NameBar name= {this.props.name} /> 
                 <span> { this.state.info  }</span>
-                <button onClick= {this.showEditHandler}>Edit</button>
+                <button className= {this.handlerClassButton} onClick= {this.showEditHandler}>Edit</button>
                 {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'

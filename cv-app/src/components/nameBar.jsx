@@ -26,7 +26,7 @@ export default class NameBar extends Component {
 
     render () { 
         return ( 
-            <article>
+            <article className={this.props.cl}>
                 <p> { this.state.name } </p>
                 <button
                     onClick={ this.showEditor}>Edit</button>
