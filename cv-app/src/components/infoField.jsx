@@ -30,7 +30,7 @@ export default class InfoField extends Component {
     render () { 
         return( 
             <section>
-               <NameBar name='Field'/> 
+               <NameBar name= {this.props.name}/> 
                 <span> { this.state.info  }</span>
                 <button onClick= {this.showEditHandler}>Edit</button>
                 {this.state.showEdit && <Form clForm = 'info-field-form'
@@ -98,14 +98,14 @@ export class InfoFieldMultiple extends Component {
 
         informations[index].text = text; 
         informations[index].showEdit = false;
-        this.setState( {informations});
+        this.setState({informations});
     }
 
     render() { 
         const { informations, mainShowEdit } = this.state;
         return (  
             <div>
-                <NameBar name = "Multiple Field" />
+                <NameBar name = {this.props.name} />
                 <Overview informations = { informations }
                     onDelete = { this.handleDelete }
                     onShowEdit = { this.showEditHandler }
