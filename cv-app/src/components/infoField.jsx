@@ -43,7 +43,7 @@ export default class InfoField extends Component {
     }
 }
 
-export class InfoFiledMultiple extends Component { 
+export class InfoFieldMultiple extends Component { 
     constructor(props) { 
         super(props);
 
