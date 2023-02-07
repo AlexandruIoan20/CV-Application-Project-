@@ -17,6 +17,7 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
+        <IntroSection /> 
       </section>  
     )
   }

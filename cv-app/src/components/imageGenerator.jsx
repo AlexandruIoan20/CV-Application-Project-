@@ -28,7 +28,7 @@ export default class ImageGenerator extends Component {
     render () { 
         return( 
             <section>
-                <img src= {this.state.image } />
+                <article className="image-holder"><img src= {this.state.image } /></article>
                 <button onClick= {this.showEditHandler}>Edit</button>
                 {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
