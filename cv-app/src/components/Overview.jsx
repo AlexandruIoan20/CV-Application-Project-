@@ -13,7 +13,6 @@ export class Overview extends Component {
 
     render () { 
         const { informations, onDelete, onEditInfo, onShowEdit } = this.props;
-        console.log(informations);
         return ( 
             <section>
                 { informations.map(info =>    

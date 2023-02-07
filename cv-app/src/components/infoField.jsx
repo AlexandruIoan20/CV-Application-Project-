@@ -50,7 +50,7 @@ export class InfoFieldMultiple extends Component {
         this.state = { 
             mainShowEdit: false,
             informations: [  
-                { id: 1, text: '...', showEdit: false } ,
+                { id: 1, text: this.props.description, showEdit: false } ,
             ]
         }
     }

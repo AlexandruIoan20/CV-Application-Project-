@@ -11,9 +11,11 @@ export class EducationSection extends Component {
     render () { 
         return ( 
             <section>
+                <NameBar name = 'Education'/> 
                 <InfoField name = 'School'/>
                 <InfoField name = 'High school'/>  
-                <InfoFieldMultiple name = "Others"/> 
+                <InfoField name = 'University' />
+                <InfoFieldMultiple name = "Others" description = "*Other official courses*"/> 
             </section>
         )
     }

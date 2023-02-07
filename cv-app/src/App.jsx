@@ -4,6 +4,7 @@ import { InfoFieldMultiple } from './components/infoField.jsx';
 import ContactSection from './composed_components/contact.jsx';
 import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';
+import ExperienceSection from './composed_components/experience.jsx';
 
 export default class App extends Component { 
   constructor (props) { 
@@ -13,7 +14,7 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
-        <EducationSection/> 
+        <ExperienceSection/> 
       </section>  
     )
   }
