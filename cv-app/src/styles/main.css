@@ -6,12 +6,24 @@
 
 html { 
     background-color: #E0E1DD;
+    font-family: "Roboto";
+    font-weight: 300;
 }
 
 .root { 
     height: 100vh;
     background-color: #E0E1DD;
-    text-align: center;
+}
+
+.container { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    flex-flow: column;
+    row-gap: 2rem;
+
+    align-items: center;
 }
 
 .composed-section { 
@@ -62,13 +74,14 @@ html {
 }  
 
 .composed-section { 
-    margin: 4rem;
     padding: 2rem;
     background-color: whitesmoke;
 
     border: 5px solid #1B263B;
     outline-offset: 1px;
     outline: 5px solid #415A77;
+
+    width: 60%;
 
     border-radius: 10px;
 }

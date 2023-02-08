@@ -10,7 +10,13 @@ export default class AboutSection extends Component {
 
     render () { 
         return ( 
-            <InfoField name = "About Me"/> 
+            <section className="composed-section">
+            <NameBar name = 'About Me' cl = "section-namebar"
+                    Fcl = "namebar-field-form"
+                    Icl = "namebar-field-input" 
+                    Bcl = "namebar-field-button" /> 
+            <InfoField name = '...cuvant de introducere: '/> 
+            </section>
         )
     }
 }

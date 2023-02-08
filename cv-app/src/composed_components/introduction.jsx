@@ -10,7 +10,7 @@ export default class IntroSection extends Component {
 
     render () { 
         return ( 
-            <section>
+            <section className="composed-section">
                 <ImageGenerator /> 
                 <InfoField name = "Name"/> 
                 <InfoField name = "Surname"/> 
