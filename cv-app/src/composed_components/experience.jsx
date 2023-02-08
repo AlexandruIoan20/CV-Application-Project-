@@ -9,16 +9,17 @@ export default class ExperienceSection extends Component {
     }
 
     render () { 
+        const { showAllButtons } = this.props;
         return ( 
             <section className="composed-section">
                 <NameBar name = "Personal Experience"
                     cl = "section-namebar"
                     Fcl = "namebar-field-form"
                     Icl = "namebar-field-input" 
-                    Bcl = "namebar-field-button" /> 
-                <InfoFieldMultiple name = "Jobs" description = "model: job - description"/> 
+                    Bcl = "namebar-field-button"showAllButtons = {showAllButtons} /> 
+                <InfoFieldMultiple name = "Jobs" description = "model: job - description" showAllButtons = {showAllButtons}/> 
                 <hr />
-                <InfoFieldMultiple name = "Others" description = "model: extracurricular activities during highschool / courses"/>
+                <InfoFieldMultiple showAllButtons = {showAllButtons} name = "Others" description = "model: extracurricular activities during highschool / courses"/>
                 <hr />
             </section>
         )

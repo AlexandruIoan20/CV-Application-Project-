@@ -20,6 +20,12 @@ export default class App extends Component {
     }
   }
 
+  hideButtons = () =>  { 
+    const showAllButtons = !this.state.showAllButtons;
+
+    this.setState ( {...this.state, showAllButtons});
+  }
+
   render () {
     const { showAllButtons } = this.state;  
     return ( 
@@ -32,7 +38,8 @@ export default class App extends Component {
 
         {showAllButtons &&  <button 
           type='reset'
-          className='submit-cv-button'>Submit Form</button> } 
+          onClick = { this.hideButtons }
+          className = 'submit-cv-button' >Submit Form</button> } 
       </section>  
     )
   }

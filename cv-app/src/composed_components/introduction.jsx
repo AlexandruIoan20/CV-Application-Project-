@@ -9,14 +9,18 @@ export default class IntroSection extends Component {
     }
 
     render () { 
+        const { showAllButtons } = this.props;
         return ( 
             <section className="composed-section">
                 <ImageGenerator /> 
-                <InfoField name = "Name: "/> 
+                <InfoField name = "Name: "
+                showAllButtons = {showAllButtons}/> 
                 <hr />
-                <InfoField name = "Surname: "/> 
+                <InfoField name = "Surname: "
+                showAllButtons = {showAllButtons}/> 
                 <hr />
-                <InfoField name = "Specialization: " /> 
+                <InfoField name = "Specialization: "
+                showAllButtons = {showAllButtons} /> 
                 <hr />
             </section>
         )

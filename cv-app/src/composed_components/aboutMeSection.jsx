@@ -9,13 +9,16 @@ export default class AboutSection extends Component {
     }
 
     render () { 
+        const { showAllButtons } = this.props;
         return ( 
             <section className="composed-section">
             <NameBar name = 'About Me' cl = "section-namebar"
                     Fcl = "namebar-field-form"
                     Icl = "namebar-field-input" 
-                    Bcl = "namebar-field-button" /> 
-            <InfoField name = '...cuvant de introducere: '/> 
+                    Bcl = "namebar-field-button"
+                    showAllButtons = {showAllButtons}  /> 
+            <InfoField name = '...cuvant de introducere: '
+            showAllButtons = {showAllButtons}/> 
             </section>
         )
     }

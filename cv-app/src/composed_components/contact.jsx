@@ -9,18 +9,24 @@ export default class ContactSection extends Component {
     }
 
     render () { 
+        const { showAllButtons } = this.props;
         return ( 
             <section className="composed-section">
                 <NameBar name = "Contact Details" 
-                cl = "section-namebar"
-                Fcl = "namebar-field-form"
-                Icl = "namebar-field-input" 
-                Bcl = "namebar-field-button"/>
-                <InfoField name = "Email: "/>
+                    cl = "section-namebar"
+                    Fcl = "namebar-field-form"
+                    Icl = "namebar-field-input" 
+                    Bcl = "namebar-field-button"
+                    showAllButtons = {showAllButtons}/>
+                <InfoField name = "Email: "
+                    showAllButtons = {showAllButtons}/>
                 <hr />
-                <InfoField name = "Phone: "/>
+                <InfoField 
+                    name = "Phone: "
+                    showAllButtons = {showAllButtons}/>
                 <hr />
-                <InfoField name = "Adress: "/>
+                <InfoField name = "Adress: "
+                    showAllButtons = {showAllButtons}/>
                 <hr />
             </section>
         )
