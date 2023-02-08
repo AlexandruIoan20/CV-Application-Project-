@@ -29,16 +29,16 @@ export default class InfoField extends Component {
 
     render () { 
         return( 
-            <section>
-               <NameBar name= {this.props.name}/> 
+            <article>
+               <NameBar name= {this.props.name} /> 
                 <span> { this.state.info  }</span>
-                <button onClick= {this.showEditHandler}>Edit</button>
+                <button className= 'show-edit-button' onClick= {this.showEditHandler}>✎</button>
                 {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
                     onAddInfo =  { this.addInfoHandler }
                     onEditInfo =  { this.editInfoHandler } /> } 
-            </section>
+            </article>
         )
     }
 }
@@ -104,20 +104,26 @@ export class InfoFieldMultiple extends Component {
     render() { 
         const { informations, mainShowEdit } = this.state;
         return (  
-            <div>
-                <NameBar name = {this.props.name} />
+            <section className="multiple-display">
+                <NameBar name = {this.props.name}
+                         Fcl = 'namebar-field-form'
+                         Icl = 'namebar-field-input'
+                         Bcl = 'namebar-field-button'/>
+
+                <article>
                 <Overview informations = { informations }
                     onDelete = { this.handleDelete }
                     onShowEdit = { this.showEditHandler }
                     onEditInfo = { this.handleEdit }
                      /> 
+                </article>
 
-                <button onClick={this.showMainEditHandler}>Add informations for this section</button>
+                <button className="add-info-multiple" onClick={this.showMainEditHandler}>Add informations for this section</button>
                 {mainShowEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
                     onAddInfo = { this.addMainInfoHandler } />  }   
-            </div>
+            </section>
         )
     }
 }

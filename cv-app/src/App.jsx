@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './styles/main.css';
+import './styles/form.css'
 import InfoField from './components/infoField.jsx';
 import { InfoFieldMultiple } from './components/infoField.jsx';
 import ContactSection from './composed_components/contact.jsx';
@@ -17,6 +19,11 @@ export default class App extends Component {
   render () {  
     return ( 
       <section className='container'>
+        <IntroSection/> 
+        <ContactSection/>
+        <AboutSection/>
+        <EducationSection /> 
+        <ExperienceSection/ > 
       </section>  
     )
   }

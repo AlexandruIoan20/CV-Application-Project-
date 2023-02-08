@@ -10,8 +10,12 @@ export default class ContactSection extends Component {
 
     render () { 
         return ( 
-            <section>
-                <NameBar name = "Contact Details" />
+            <section className="composed-section">
+                <NameBar name = "Contact Details" 
+                cl = "section-namebar"
+                Fcl = "namebar-field-form"
+                Icl = "namebar-field-input" 
+                Bcl = "namebar-field-button"/>
                 <InfoField name = "Email"/>
                 <InfoField name = "Phone"/>
                 <InfoField name = "Adress"/>

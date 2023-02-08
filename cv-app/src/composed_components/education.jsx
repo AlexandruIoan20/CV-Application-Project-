@@ -10,8 +10,11 @@ export class EducationSection extends Component {
 
     render () { 
         return ( 
-            <section>
-                <NameBar name = 'Education'/> 
+            <section className="composed-section">
+                <NameBar name = 'Education' cl = "section-namebar"
+                    Fcl = "namebar-field-form"
+                    Icl = "namebar-field-input" 
+                    Bcl = "namebar-field-button" /> 
                 <InfoField name = 'School'/>
                 <InfoField name = 'High school'/>  
                 <InfoField name = 'University' />

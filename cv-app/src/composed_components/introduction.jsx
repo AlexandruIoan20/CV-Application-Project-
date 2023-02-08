@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import InfoField from "../components/infoField.jsx";
-import { InfoFieldMultiple } from "../components/infoField.jsx";
-import NameBar from "../components/nameBar";
+import ImageGenerator from "../components/imageGenerator.jsx";
 
 
 export default class IntroSection extends Component { 
@@ -11,7 +10,8 @@ export default class IntroSection extends Component {
 
     render () { 
         return ( 
-            <section>
+            <section className="composed-section">
+                <ImageGenerator /> 
                 <InfoField name = "Name"/> 
                 <InfoField name = "Surname"/> 
                 <InfoField name = "Specialization" /> 

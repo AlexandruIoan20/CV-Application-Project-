@@ -1,0 +1,72 @@
+.namebar-field-form, .info-field-form{ 
+    display: flex;
+    column-gap: 1em;
+}
+
+.namebar-field-input { 
+    border: none; 
+    background-color: #415A77;
+
+    outline: none;
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 5px;
+}
+
+.namebar-field-button { 
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(196, 255, 194);
+}
+
+article { 
+    display: flex;
+    column-gap: 1em;
+
+    margin-left: 1em;
+}
+
+.info-field-input { 
+    outline: none;
+    border: none;
+
+    background-color: #E0E1DD;
+
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.info-field-button { 
+    background-color: #778DA9;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 20px;
+    border: none;
+}
+
+.info-field-button:hover, .info-field-button:focus { 
+    background-color: #1B263B;
+    color: whitesmoke;
+}

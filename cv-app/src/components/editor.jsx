@@ -11,9 +11,9 @@ export default class Editor extends Component {
             <form className= { clForm }>
             <input type="text" className= { clInput } id = { clInput } />
             <button 
-                onClick = { () =>  onEditInfo(info, document.getElementById('info-field-input').value)} 
+                onClick = { () =>  onEditInfo(info, document.getElementById(`${clInput}`).value)} 
                 type="reset" 
-                className={ clButton }> Edit </button>
+                className={ clButton }>✓</button>
         </form>
         )
     }
