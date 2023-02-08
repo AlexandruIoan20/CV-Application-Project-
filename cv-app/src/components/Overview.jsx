@@ -16,7 +16,7 @@ export class Overview extends Component {
         return ( 
             <section className="over-view">
                 { informations.map(info =>    
-                    <article key = {info.id} > 
+                    <article key = {info.id} className = 'over-view-element' > 
                     <p> <span> {info.id}. </span> { info.text }</p>
                     <button className="delete-button" onClick={ () => onDelete (info.id) }>D</button>
                     <button className="show-edit-button" onClick={ () => onShowEdit(info)}>✎</button>
@@ -28,6 +28,7 @@ export class Overview extends Component {
                         onEditInfo = { onEditInfo }
                         info = {info}/>
                     }
+                    
                     </article>
                 )}
             </section>

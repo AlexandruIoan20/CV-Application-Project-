@@ -16,9 +16,12 @@ export default class ContactSection extends Component {
                 Fcl = "namebar-field-form"
                 Icl = "namebar-field-input" 
                 Bcl = "namebar-field-button"/>
-                <InfoField name = "Email"/>
-                <InfoField name = "Phone"/>
-                <InfoField name = "Adress"/>
+                <InfoField name = "Email: "/>
+                <hr />
+                <InfoField name = "Phone: "/>
+                <hr />
+                <InfoField name = "Adress: "/>
+                <hr />
             </section>
         )
     }

@@ -12,9 +12,12 @@ export default class IntroSection extends Component {
         return ( 
             <section className="composed-section">
                 <ImageGenerator /> 
-                <InfoField name = "Name"/> 
-                <InfoField name = "Surname"/> 
-                <InfoField name = "Specialization" /> 
+                <InfoField name = "Name: "/> 
+                <hr />
+                <InfoField name = "Surname: "/> 
+                <hr />
+                <InfoField name = "Specialization: " /> 
+                <hr />
             </section>
         )
     }

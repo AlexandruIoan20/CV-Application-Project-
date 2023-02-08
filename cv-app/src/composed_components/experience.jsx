@@ -17,7 +17,9 @@ export default class ExperienceSection extends Component {
                     Icl = "namebar-field-input" 
                     Bcl = "namebar-field-button" /> 
                 <InfoFieldMultiple name = "Jobs" description = "model: job - description"/> 
+                <hr />
                 <InfoFieldMultiple name = "Others" description = "model: extracurricular activities during highschool / courses"/>
+                <hr />
             </section>
         )
     }

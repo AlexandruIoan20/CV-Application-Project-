@@ -16,8 +16,11 @@ export class EducationSection extends Component {
                     Icl = "namebar-field-input" 
                     Bcl = "namebar-field-button" /> 
                 <InfoField name = 'School'/>
-                <InfoField name = 'High school'/>  
+                <hr />
+                <InfoField name = 'High school'/> 
+                <hr /> 
                 <InfoField name = 'University' />
+                <hr />
                 <InfoFieldMultiple name = "Others" description = "*Other official courses*"/> 
             </section>
         )
