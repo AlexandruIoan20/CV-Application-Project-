@@ -10,7 +10,7 @@ export class EducationSection extends Component {
 
     render () { 
         return ( 
-            <section>
+            <section className="composed-section">
                 <NameBar name = 'Education' cl = "section-namebar"/> 
                 <InfoField name = 'School'/>
                 <InfoField name = 'High school'/>  

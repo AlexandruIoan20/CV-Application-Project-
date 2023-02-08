@@ -11,9 +11,9 @@ export default class Form extends Component {
             <form className= { clForm }>
                 <input type="text" className= { clInput } id = { clInput } />
                 <button 
-                    onClick = { () =>  onAddInfo(document.getElementById(`${clInput}`).value) } 
+                    onClick = { () => onAddInfo(document.getElementById(`${clInput}`).value) } 
                     type="reset" 
-                    className={ clButton }>✓</button>
+                    className={ clButton }> ✓</button>
             </form>
         )
     }

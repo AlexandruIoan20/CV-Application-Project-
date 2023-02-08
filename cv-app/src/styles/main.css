@@ -8,9 +8,16 @@ html {
     background-color: #E0E1DD;
 }
 
-.container, .root { 
+.root { 
     height: 100vh;
     background-color: #E0E1DD;
+    text-align: center;
+}
+
+.composed-section { 
+    display: flex;
+    flex-flow: column;
+    row-gap: 1em;
 }
 
 .section-namebar { 
@@ -32,7 +39,7 @@ html {
     background-color: red;
 }
 
-.show-edit-button { 
+.show-edit-button, .delete-button, .add-info-multiple { 
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-top: 0.1em;
@@ -42,4 +49,38 @@ html {
     border: none;
 
     background-color: #778DA9;
+}
+
+.add-info-multiple { 
+    width: fit-content;
+    padding: 0.5em;
+}
+
+.show-edit-button:hover, .show-edit-button:active, .delete-button:hover, .delete-button:active, .add-info-multiple:hover, .add-info-multiple:active {
+    background-color: #1B263B;
+    color: whitesmoke;
+}  
+
+.composed-section { 
+    margin: 4rem;
+    padding: 2rem;
+    background-color: whitesmoke;
+
+    border: 5px solid #1B263B;
+    outline-offset: 1px;
+    outline: 5px solid #415A77;
+
+    border-radius: 10px;
+}
+
+.multiple-display  {
+    display: flex; 
+    flex-flow: column;
+    row-gap: 1em ;
+}
+
+.over-view  {
+    display: flex; 
+    flex-flow: column;
+    row-gap: 0.5em ;
 }
