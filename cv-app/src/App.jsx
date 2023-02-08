@@ -14,16 +14,25 @@ import ImageGenerator from './components/imageGenerator.jsx';
 export default class App extends Component { 
   constructor (props) { 
     super(props);
+
+    this.state  = { 
+      showAllButtons:  true,
+    }
   }
 
-  render () {  
+  render () {
+    const { showAllButtons } = this.state;  
     return ( 
       <section className='container'>
-        <IntroSection/> 
-        <ContactSection/>
-        <AboutSection/>
-        <EducationSection /> 
-        <ExperienceSection/ > 
+        <IntroSection showAllButtons = {showAllButtons}/> 
+        <ContactSection showAllButtons = {showAllButtons}/>
+        <AboutSection showAllButtons = {showAllButtons}/>
+        <EducationSection showAllButtons = {showAllButtons}/> 
+        <ExperienceSection showAllButtons = {showAllButtons}/> 
+
+        {showAllButtons &&  <button 
+          type='reset'
+          className='submit-cv-button'>Submit Form</button> } 
       </section>  
     )
   }
