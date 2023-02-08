@@ -32,9 +32,9 @@ export default class NameBar extends Component {
                     className= 'show-edit-button'
                     onClick={ this.showEditor}>✎</button>
 
-                { this.state.showEdit && <Editor clForm = 'namebar-field-form'
-                        clInput = 'namebar-field-input'
-                        clButton = 'namebar-field-button'
+                { this.state.showEdit && <Editor clForm =  { this.props.Fcl || 'info-field-form' }
+                        clInput = { this.props.Icl || 'info-field-input' }
+                        clButton = { this.props.Bcl || 'info-field-button' }
                         onEditInfo = {this.editName} /> }
             </article>
         )

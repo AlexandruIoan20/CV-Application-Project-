@@ -105,7 +105,10 @@ export class InfoFieldMultiple extends Component {
         const { informations, mainShowEdit } = this.state;
         return (  
             <section className="multiple-display">
-                <NameBar name = {this.props.name} />
+                <NameBar name = {this.props.name}
+                         Fcl = 'namebar-field-form'
+                         Icl = 'namebar-field-input'
+                         Bcl = 'namebar-field-button'/>
 
                 <article>
                 <Overview informations = { informations }
