@@ -29,11 +29,12 @@ export default class NameBar extends Component {
             <article className={this.props.cl}>
                 <p> { this.state.name } </p>
                 <button
-                    onClick={ this.showEditor}>Edit</button>
+                    className= 'show-edit-button'
+                    onClick={ this.showEditor}>✎</button>
 
-                { this.state.showEdit && <Editor clForm = 'info-field-form'
-                        clInput = 'info-field-input'
-                        clButton = 'info-field-button'
+                { this.state.showEdit && <Editor clForm = 'namebar-field-form'
+                        clInput = 'namebar-field-input'
+                        clButton = 'namebar-field-button'
                         onEditInfo = {this.editName} /> }
             </article>
         )

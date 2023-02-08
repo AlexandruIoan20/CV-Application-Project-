@@ -20,7 +20,7 @@ html {
     background-color: #0D1B2A;
     color: white;
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Roboto';
 
     display: flex;
     column-gap: 1em;
@@ -28,6 +28,18 @@ html {
     border-radius: 5px;
 }
 
-.info-field-button { 
+.namebar-field-button { 
     background-color: red;
+}
+
+.show-edit-button { 
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 20px;
+    border: none;
+
+    background-color: #778DA9;
 }
