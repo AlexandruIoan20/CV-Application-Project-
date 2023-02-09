@@ -10,6 +10,22 @@ html {
     font-weight: 300;
 }
 
+header { 
+    background-color: #0D1B2A;
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+h1 { 
+    color: whitesmoke;
+    padding: 1rem;
+
+    font-family: "Righteous";  
+    font-style: italic;
+    font-size: 3rem;
+}
+
 .root { 
     height: 100vh;
     background-color: #E0E1DD;
@@ -104,4 +120,21 @@ html {
     padding-bottom: 0.3em;
     border-bottom: solid 3px #000;
     border-radius: 5px;
+}
+
+footer { 
+    background-color: #0D1B2A;
+    text-align: center;
+
+    margin-top: 2rem;
+}
+
+footer p { 
+    color: whitesmoke;
+    padding: 1rem;
+
+    font-family: "Righteous";  
+    font-style: italic;
+    letter-spacing: .11em;
+    font-weight: 700;
 }

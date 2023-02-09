@@ -1,0 +1,32 @@
+.info-field-button:hover, .info-field-button:focus { 
+    background-color: #1B263B;
+    color: whitesmoke;
+}
+
+.namebar-field-button { 
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(196, 255, 194);
+}
+
+.show-edit-button:hover, .show-edit-button:active, .delete-button:hover, .delete-button:active, .add-info-multiple:hover, .add-info-multiple:active {
+    background-color: #1B263B;
+    color: whitesmoke;
+}
+
+.show-edit-button, .delete-button, .add-info-multiple { 
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    border-radius: 20px;
+    border: none;
+
+    background-color: #778DA9;
+}

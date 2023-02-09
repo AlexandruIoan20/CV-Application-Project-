@@ -29,14 +29,20 @@ export default class App extends Component {
   render() {
     const { showAllButtons } = this.state;
     return (
-      <section className='container'>
+      <section className='app-container'>
+        <header>
+          <h1>CV Creator</h1>
+        </header>
+
+        <main className='container'>
         <IntroSection showAllButtons={showAllButtons} />
         <ContactSection showAllButtons={showAllButtons} />
         <AboutSection showAllButtons={showAllButtons} />
         <EducationSection showAllButtons={showAllButtons} />
         <ExperienceSection showAllButtons={showAllButtons} />
 
-        {showAllButtons && <button
+        {showAllButtons && 
+        <button
           type='reset'
           onClick={this.hideButtons}
           className='submit-cv-button'>Submit CV</button>}
@@ -50,6 +56,13 @@ export default class App extends Component {
             <p className='bonus-info'>Reset the page for a new CV model!</p>
             </section>
             }
+            </main>
+
+          {showAllButtons && 
+            <footer>
+              <p>©Alexandru Ioan 2023 - AlexandruIoan20 Github</p>
+            </footer>
+          }
       </section>
     )
   }
