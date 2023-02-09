@@ -67,27 +67,10 @@ h1 {
     background-color: red;
 }
 
-.show-edit-button, .delete-button, .add-info-multiple { 
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-
-    border-radius: 20px;
-    border: none;
-
-    background-color: #778DA9;
-}
-
 .add-info-multiple { 
     width: fit-content;
     padding: 0.5em;
 }
-
-.show-edit-button:hover, .show-edit-button:active, .delete-button:hover, .delete-button:active, .add-info-multiple:hover, .add-info-multiple:active {
-    background-color: #1B263B;
-    color: whitesmoke;
-}  
 
 .composed-section { 
     padding: 2rem;
