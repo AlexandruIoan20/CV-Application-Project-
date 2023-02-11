@@ -1,0 +1,15 @@
+.intro-section { 
+    display: flex;
+    flex-flow: row;
+}
+
+
+.intro-data-section { 
+    display: flex;
+    flex-flow: column;
+
+    justify-content: center;
+    align-content: center;
+
+    row-gap: 1em;
+}

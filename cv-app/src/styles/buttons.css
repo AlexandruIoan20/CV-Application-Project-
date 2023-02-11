@@ -30,3 +30,9 @@
 
     background-color: #778DA9;
 }
+
+.change-photo { 
+    padding: 0.5em;
+    font-style: italic;
+    float: left;
+}
