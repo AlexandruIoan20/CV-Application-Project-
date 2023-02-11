@@ -8,6 +8,7 @@ import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';
 import ExperienceSection from './composed_components/experience.jsx';
 import IntroSection from './composed_components/introduction.jsx';
+import DownloadPage from './components/DownloadPage.jsx';
 
 
 
