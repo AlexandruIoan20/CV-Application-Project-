@@ -3,14 +3,12 @@ import './styles/main.css';
 import './styles/form.css'
 import './styles/buttons.css';
 import './styles/intro.css';
-import InfoField from './components/infoField.jsx';
-import { InfoFieldMultiple } from './components/infoField.jsx';
 import ContactSection from './composed_components/contact.jsx';
 import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';
 import ExperienceSection from './composed_components/experience.jsx';
 import IntroSection from './composed_components/introduction.jsx';
-import ImageGenerator from './components/imageGenerator.jsx';
+
 
 
 export default class App extends Component {
@@ -32,9 +30,9 @@ export default class App extends Component {
     const { showAllButtons } = this.state;
     return (
       <section className='app-container'>
-        <header>
+         {showAllButtons &&  <header>
           <h1>CV Creator</h1>
-        </header>
+        </header> } 
 
         <main className='container'>
         <IntroSection showAllButtons={showAllButtons} />
@@ -61,7 +59,7 @@ export default class App extends Component {
             </main>
 
           {showAllButtons && 
-            <footer>
+              <footer>
               <p>©Alexandru Ioan 2023 - AlexandruIoan20 Github</p>
             </footer>
           }
