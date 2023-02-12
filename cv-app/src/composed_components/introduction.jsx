@@ -13,7 +13,7 @@ export default class IntroSection extends Component {
         return ( 
             <section className="composed-section intro-section">
                 <section className="intro-image-section">
-                <ImageGenerator /> 
+                <ImageGenerator showAllButtons={showAllButtons}/> 
                 </section>
 
                 <section className="intro-data-section">

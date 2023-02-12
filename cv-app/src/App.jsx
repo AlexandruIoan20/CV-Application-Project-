@@ -8,8 +8,7 @@ import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';
 import ExperienceSection from './composed_components/experience.jsx';
 import IntroSection from './composed_components/introduction.jsx';
-import DownloadPage from './components/DownloadPage.jsx';
-
+import DoubleCheck from './components/doubleCheck.jsx';
 
 
 export default class App extends Component {
@@ -18,17 +17,24 @@ export default class App extends Component {
 
     this.state = {
       showAllButtons: true,
+      showConfirmCVSection: false,
     }
   }
 
   hideButtons = () => {
     const showAllButtons = !this.state.showAllButtons;
+    const showConfirmCVSection = false;
 
-    this.setState({ ...this.state, showAllButtons });
+    this.setState({ ...this.state, showAllButtons, showConfirmCVSection });
+  }
+
+  confirmCV = () => { 
+    const showConfirmCVSection = !this.state.showConfirmCVSection;
+    this.setState({ ...this.state, showConfirmCVSection });
   }
 
   render() {
-    const { showAllButtons } = this.state;
+    const { showAllButtons, showConfirmCVSection } = this.state;
     return (
       <section className='app-container'>
          {showAllButtons &&  <header>
@@ -45,8 +51,13 @@ export default class App extends Component {
         {showAllButtons && 
         <button
           type='reset'
-          onClick={this.hideButtons}
+          onClick={this.confirmCV}
           className='submit-cv-button'>Submit CV</button>}
+
+        {showConfirmCVSection && <DoubleCheck onMainFunction = {  this.hideButtons }
+          onCancel = {this.confirmCV}
+          description = "Are you sure you want to submit the CV?"
+          name = 'Submit CV Component'  /> }
 
           {!showAllButtons && 
           <section className='after-submit-buttons'>
