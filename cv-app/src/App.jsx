@@ -3,6 +3,7 @@ import './styles/main.css';
 import './styles/form.css'
 import './styles/buttons.css';
 import './styles/intro.css';
+import './styles/double_check.css';
 import ContactSection from './composed_components/contact.jsx';
 import AboutSection from './composed_components/aboutMeSection.jsx';
 import { EducationSection } from './composed_components/education.jsx';

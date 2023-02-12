@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+/* ************************** */
+/* *** | Section styles | *** */
+/* ************************** */
+
 html { 
     background-color: #E0E1DD;
     font-family: "Roboto";
@@ -47,6 +51,10 @@ h1 {
     flex-flow: column;
     row-gap: 1em;
 }
+
+/* **************************** */
+/* *** | Component Styles | *** */
+/* **************************** */
 
 .section-namebar { 
     margin: 0.5em;

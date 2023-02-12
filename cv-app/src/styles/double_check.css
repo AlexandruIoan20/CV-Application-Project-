@@ -1,0 +1,58 @@
+.container { 
+    position: relative;
+}
+
+.double-check-section { 
+    background-color: #1B263B;
+    color: whitesmoke;
+
+    font-family: "Righteous";
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+    font-weight: 700;
+    font-style: italic;
+
+    border-radius: 20px;
+    transform: skewX(-5deg);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.double-check-section button { 
+    margin-inline: .5rem;
+
+    padding: 0.5em;
+    margin-top: 0.5em;
+    transform: skewX(-5deg);
+
+    border: none;
+}
+
+.double-check-first { 
+    background-color: rgb(222, 254, 173);
+}
+
+.double-check-first:hover, .double-check-first:active { 
+    background-color: rgb(5, 245, 5);
+    text-decoration: underline;
+    color: whitesmoke;
+
+    font-weight:900;
+}
+
+.double-check-second { 
+    background-color: rgb(248, 145, 145);
+}
+
+.double-check-second:hover, .double-check-first:active { 
+    background-color: red;
+    text-decoration: underline;
+    color: whitesmoke;
+
+    font-weight: 900;
+}
