@@ -27,11 +27,18 @@ export default class App extends Component {
     const showConfirmCVSection = false;
 
     this.setState({ ...this.state, showAllButtons, showConfirmCVSection });
+    console.log(this.state.showConfirmCVSection);
   }
 
   confirmCV = () => { 
     const showConfirmCVSection = !this.state.showConfirmCVSection;
     this.setState({ ...this.state, showConfirmCVSection });
+
+    console.log(this.state.showConfirmCVSection);
+  }
+
+  handlerStopFunctionality = () => { 
+    return this.state.showConfirmCVSection;
   }
 
   render() {
@@ -43,22 +50,22 @@ export default class App extends Component {
         </header> } 
 
         <main className='container'>
-        <IntroSection showAllButtons={showAllButtons} />
-        <ContactSection showAllButtons={showAllButtons} />
-        <AboutSection showAllButtons={showAllButtons} />
-        <EducationSection showAllButtons={showAllButtons} />
-        <ExperienceSection showAllButtons={showAllButtons} />
+        <IntroSection showAllButtons={showAllButtons}  stopFunctionality =  {showConfirmCVSection}/>
+        <ContactSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection}/>
+        <AboutSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection} />
+        <EducationSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection}/>
+        <ExperienceSection showAllButtons={showAllButtons} stopFunctionality = {showConfirmCVSection} />
 
         {showAllButtons && 
         <button
           type='reset'
-          onClick={this.confirmCV}
+          onClick={ () => { this.confirmCV(); console.log(this.state.showConfirmCVSection) }}
           className='submit-cv-button'>Submit CV</button>}
 
         {showConfirmCVSection && <DoubleCheck onMainFunction = {  this.hideButtons }
           onCancel = {this.confirmCV}
           description = "Are you sure you want to submit the CV?"
-          name = 'Submit CV Component'  /> }
+            /> }
 
           {!showAllButtons && 
           <section className='after-submit-buttons'>

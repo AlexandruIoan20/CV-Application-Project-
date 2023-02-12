@@ -25,20 +25,26 @@ export default class NameBar extends Component {
     }
 
     render () { 
-        const { showAllButtons } = this.props;
+        const { showAllButtons, stopFunctionality } = this.props;
+        console.log(stopFunctionality);
         return ( 
             <article className={this.props.cl}>
                 <p> { this.state.name } </p>
                 { showAllButtons && <button
                     className= 'show-edit-button'
-                    onClick={ this.showEditor}>✎</button>
+                    onClick={ ()  => { 
+                        if(!stopFunctionality) { 
+                            this.showEditor();
+                        }
+                    }}>✎</button>
                 }
 
                 { this.state.showEdit && <Editor clForm =  { this.props.Fcl || 'info-field-form' }
                         clInput = { this.props.Icl || 'info-field-input' }
                         clButton = { this.props.Bcl || 'info-field-button' }
                         onEditInfo = {this.editName} 
-                        showAllButtons = {showAllButtons} /> }
+                        showAllButtons = {showAllButtons}
+                      /> }
             </article>
         )
     }

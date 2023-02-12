@@ -12,7 +12,7 @@ export class Overview extends Component {
     }    
 
     render () { 
-        const { informations, onDelete, onEditInfo, onShowEdit, showAllButtons } = this.props;
+        const { informations, onDelete, onEditInfo, onShowEdit, showAllButtons, stopFunctionality } = this.props;
         return ( 
             <section className="over-view">
                 { informations.map(info =>    
@@ -20,13 +20,20 @@ export class Overview extends Component {
                     <p> <span> {info.id}. </span> { info.text }</p>
                     { showAllButtons && <button 
                         className="delete-button" 
-                        onClick={ () => 
-                        onDelete (info.id) }>D</button>
+                        onClick={ () => {
+                            if(!stopFunctionality) { 
+                                onDelete (info.id)
+                            }
+                        }}>D</button>
                     }
 
                     {showAllButtons && <button 
                         className="show-edit-button" 
-                        onClick={ () => onShowEdit(info)}>✎</button> 
+                        onClick={ () =>  {
+                            if(!stopFunctionality) { 
+                                onShowEdit(info);
+                            }
+                        } }>✎</button> 
                     } 
 
                     { info.showEdit && 

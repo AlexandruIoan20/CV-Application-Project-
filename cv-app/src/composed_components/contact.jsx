@@ -9,7 +9,7 @@ export default class ContactSection extends Component {
     }
 
     render () { 
-        const { showAllButtons } = this.props;
+        const { showAllButtons, stopFunctionality } = this.props;
         return ( 
             <section className="composed-section">
                 <NameBar name = "Contact Details" 
@@ -17,16 +17,20 @@ export default class ContactSection extends Component {
                     Fcl = "namebar-field-form"
                     Icl = "namebar-field-input" 
                     Bcl = "namebar-field-button"
-                    showAllButtons = {showAllButtons}/>
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } />
                 <InfoField name = "Email: "
-                    showAllButtons = {showAllButtons}/>
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } />
                 <hr />
                 <InfoField 
                     name = "Phone: "
-                    showAllButtons = {showAllButtons}/>
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } />
                 <hr />
                 <InfoField name = "Adress: "
-                    showAllButtons = {showAllButtons}/>
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } />
                 <hr />
             </section>
         )

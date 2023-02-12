@@ -9,24 +9,35 @@ export class EducationSection extends Component {
     }
 
     render () { 
-        const { showAllButtons } = this.props;
+        const { showAllButtons, stopFunctionality } = this.props;
         return ( 
             <section className="composed-section">
                 <NameBar name = 'Education' cl = "section-namebar"
                     Fcl = "namebar-field-form"
                     Icl = "namebar-field-input" 
-                    Bcl = "namebar-field-button" /> 
+                    Bcl = "namebar-field-button"
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } /> 
+
                 <InfoField name = 'School'
-                showAllButtons = {showAllButtons}/>
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } />
                 <hr />
+
                 <InfoField name = 'High school'
-                showAllButtons = {showAllButtons}/> 
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality } /> 
                 <hr /> 
+
                 <InfoField name = 'University'
-                showAllButtons = {showAllButtons} />
+                showAllButtons = {showAllButtons}
+                stopFunctionality = { stopFunctionality }  />
                 <hr />
                 <InfoFieldMultiple  
-                showAllButtons = {showAllButtons} name = "Others" description = "*Other official courses*"/> 
+                    showAllButtons = {showAllButtons}
+                    stopFunctionality = { stopFunctionality }  
+                    name = "Others" 
+                    description = "*Other official courses*"/> 
             </section>
         )
     }
