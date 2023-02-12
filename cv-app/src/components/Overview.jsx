@@ -21,7 +21,7 @@ export class Overview extends Component {
                     { showAllButtons && <button 
                         className="delete-button" 
                         onClick={ () => {
-                            if(!stopFunctionality) { 
+                            if(stopFunctionality) { 
                                 onDelete (info.id)
                             }
                         }}>D</button>
@@ -30,7 +30,7 @@ export class Overview extends Component {
                     {showAllButtons && <button 
                         className="show-edit-button" 
                         onClick={ () =>  {
-                            if(!stopFunctionality) { 
+                            if(stopFunctionality) { 
                                 onShowEdit(info);
                             }
                         } }>✎</button> 

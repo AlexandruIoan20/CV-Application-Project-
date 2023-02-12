@@ -28,9 +28,7 @@ export default class InfoField extends Component {
     }
 
     render () { 
-        const { showAllButtons, stopFunctionality} = this.props;
-
-        console.log(this.props);
+        const { showAllButtons, stopFunctionality } = this.props;
         return( 
             <article>
                <NameBar name= {this.props.name}  showAllButtons = {showAllButtons} stopFunctionality = {stopFunctionality}/> 
@@ -38,7 +36,7 @@ export default class InfoField extends Component {
                 { showAllButtons && <button 
                     className= 'show-edit-button' 
                     onClick= { () =>  { 
-                        if(!stopFunctionality) { 
+                        if(stopFunctionality) { 
                             this.showEditHandler();
                         }
                     } }>✎</button> }

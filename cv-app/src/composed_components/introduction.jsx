@@ -20,8 +20,7 @@ export default class IntroSection extends Component {
                 <section className="intro-data-section">
                 <InfoField name = "Name: "
                     showAllButtons = {showAllButtons}
-                    stopFunctionality = { stopFunctionality } 
-                    stopFunctionality = { stopFunctionality } /> 
+                    stopFunctionality = { stopFunctionality }  /> 
                 <hr />
                 <InfoField name = "Surname: "
                     showAllButtons = {showAllButtons}

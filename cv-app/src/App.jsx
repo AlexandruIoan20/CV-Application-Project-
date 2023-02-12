@@ -18,31 +18,60 @@ export default class App extends Component {
 
     this.state = {
       showAllButtons: true,
-      showConfirmCVSection: false,
+
+      notifications: { 
+        showConfirmCVSection: false,
+      },
+
+      programFunctional: true,
     }
   }
 
   hideButtons = () => {
     const showAllButtons = !this.state.showAllButtons;
-    const showConfirmCVSection = false;
+    const programFunctional = true;
 
-    this.setState({ ...this.state, showAllButtons, showConfirmCVSection });
-    console.log(this.state.showConfirmCVSection);
+    const notifications = this.state.notifications; 
+    notifications.showConfirmCVSection = false;
+
+    this.setState({ ...this.state, showAllButtons, notifications, programFunctional });
   }
 
   confirmCV = () => { 
-    const showConfirmCVSection = !this.state.showConfirmCVSection;
-    this.setState({ ...this.state, showConfirmCVSection });
+    const notifications = this.state.notifications; 
+    notifications.showConfirmCVSection = !this.state.notifications.showConfirmCVSection;
 
-    console.log(this.state.showConfirmCVSection);
+    const programFunctional = false;
+
+    this.setState( {...this.state, notifications, programFunctional });
   }
 
-  handlerStopFunctionality = () => { 
-    return this.state.showConfirmCVSection;
+  programIsFunctional = () => { 
+    let calculateProgramFunctional;
+    const notifications = Object.values(this.state.notifications);
+    notifications.forEach(n => { 
+      if(n == true) calculateProgramFunctional = false;
+    })
+
+    calculateProgramFunctional = true;
+    const programFunctional = calculateProgramFunctional;
+    this.setState( { ...this.state, programFunctional});
+  }
+
+  cancelEverything = () =>  {
+    const notifications = this.state.notifications;
+
+    for(const property in notifications) {
+      notifications[property] = false;
+    }
+
+    const programFunctional = true; 
+
+    this.setState( {...this.state, notifications, programFunctional});
   }
 
   render() {
-    const { showAllButtons, showConfirmCVSection } = this.state;
+    const { showAllButtons, notifications, programFunctional } = this.state;
     return (
       <section className='app-container'>
          {showAllButtons &&  <header>
@@ -50,20 +79,24 @@ export default class App extends Component {
         </header> } 
 
         <main className='container'>
-        <IntroSection showAllButtons={showAllButtons}  stopFunctionality =  {showConfirmCVSection}/>
-        <ContactSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection}/>
-        <AboutSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection} />
-        <EducationSection showAllButtons={showAllButtons} stopFunctionality =  {showConfirmCVSection}/>
-        <ExperienceSection showAllButtons={showAllButtons} stopFunctionality = {showConfirmCVSection} />
+        <IntroSection showAllButtons={showAllButtons}  stopFunctionality =  {programFunctional}/>
+        <ContactSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional}/>
+        <AboutSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional} />
+        <EducationSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional}/>
+        <ExperienceSection showAllButtons={showAllButtons} stopFunctionality = {programFunctional} />
 
         {showAllButtons && 
         <button
           type='reset'
-          onClick={ () => { this.confirmCV(); console.log(this.state.showConfirmCVSection) }}
+          onClick={ async () => {
+             this.confirmCV(); 
+            console.log(this.state);
+            }}
           className='submit-cv-button'>Submit CV</button>}
 
-        {showConfirmCVSection && <DoubleCheck onMainFunction = {  this.hideButtons }
-          onCancel = {this.confirmCV}
+        { !programFunctional && notifications.showConfirmCVSection
+           && <DoubleCheck onMainFunction = { () => {  this.hideButtons(); } }
+          onCancel = {this.cancelEverything}
           description = "Are you sure you want to submit the CV?"
             /> }
 
