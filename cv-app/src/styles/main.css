@@ -10,6 +10,22 @@ html {
     font-weight: 300;
 }
 
+header { 
+    background-color: #0D1B2A;
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+h1 { 
+    color: whitesmoke;
+    padding: 1rem;
+
+    font-family: "Righteous";  
+    font-style: italic;
+    font-size: 3rem;
+}
+
 .root { 
     height: 100vh;
     background-color: #E0E1DD;
@@ -51,27 +67,15 @@ html {
     background-color: red;
 }
 
-.show-edit-button, .delete-button, .add-info-multiple { 
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-
-    border-radius: 20px;
-    border: none;
-
-    background-color: #778DA9;
-}
-
 .add-info-multiple { 
     width: fit-content;
     padding: 0.5em;
 }
 
-.show-edit-button:hover, .show-edit-button:active, .delete-button:hover, .delete-button:active, .add-info-multiple:hover, .add-info-multiple:active {
-    background-color: #1B263B;
-    color: whitesmoke;
-}  
+.image-holder { 
+    border: 4px #000 solid;
+    height: 25rem;
+}
 
 .composed-section { 
     padding: 2rem;
@@ -81,7 +85,7 @@ html {
     outline-offset: 1px;
     outline: 5px solid #415A77;
 
-    width: 60%;
+    width: 55%;
 
     border-radius: 10px;
 }
@@ -95,5 +99,30 @@ html {
 .over-view  {
     display: flex; 
     flex-flow: column;
-    row-gap: 0.5em ;
+    row-gap: 0.5em;
+
+
+}
+
+.over-view-element { 
+    padding-bottom: 0.3em;
+    border-bottom: solid 3px #000;
+    border-radius: 5px;
+}
+
+footer { 
+    background-color: #0D1B2A;
+    text-align: center;
+
+    margin-top: 2rem;
+}
+
+footer p { 
+    color: whitesmoke;
+    padding: 1rem;
+
+    font-family: "Righteous";  
+    font-style: italic;
+    letter-spacing: .11em;
+    font-weight: 700;
 }

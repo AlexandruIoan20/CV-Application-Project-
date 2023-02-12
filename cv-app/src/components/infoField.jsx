@@ -28,16 +28,18 @@ export default class InfoField extends Component {
     }
 
     render () { 
+        const { showAllButtons } = this.props;
         return( 
             <article>
-               <NameBar name= {this.props.name} /> 
+               <NameBar name= {this.props.name}  showAllButtons = {showAllButtons}/> 
                 <span> { this.state.info  }</span>
-                <button className= 'show-edit-button' onClick= {this.showEditHandler}>✎</button>
+                { showAllButtons && <button className= 'show-edit-button' onClick= {this.showEditHandler}>✎</button> }
                 {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
                     onAddInfo =  { this.addInfoHandler }
-                    onEditInfo =  { this.editInfoHandler } /> } 
+                    onEditInfo =  { this.editInfoHandler }
+                    showAllButtons = {showAllButtons} /> } 
             </article>
         )
     }
@@ -103,26 +105,34 @@ export class InfoFieldMultiple extends Component {
 
     render() { 
         const { informations, mainShowEdit } = this.state;
+        const { showAllButtons } = this.props;
+        console.log (this.props);
         return (  
             <section className="multiple-display">
                 <NameBar name = {this.props.name}
                          Fcl = 'namebar-field-form'
                          Icl = 'namebar-field-input'
-                         Bcl = 'namebar-field-button'/>
+                         Bcl = 'namebar-field-button'
+                         showAllButtons = {showAllButtons}/>
 
                 <article>
                 <Overview informations = { informations }
                     onDelete = { this.handleDelete }
                     onShowEdit = { this.showEditHandler }
                     onEditInfo = { this.handleEdit }
+                    showAllButtons = {showAllButtons}
                      /> 
                 </article>
 
-                <button className="add-info-multiple" onClick={this.showMainEditHandler}>Add informations for this section</button>
+                {showAllButtons && <button 
+                    className="add-info-multiple" 
+                    onClick={this.showMainEditHandler}>Add informations for this section</button> }
                 {mainShowEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
-                    onAddInfo = { this.addMainInfoHandler } />  }   
+                    onAddInfo = { this.addMainInfoHandler }
+                    showAllButtons = {showAllButtons}
+                     />  }   
             </section>
         )
     }

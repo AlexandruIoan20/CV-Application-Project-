@@ -6,7 +6,7 @@ export default class Form extends Component {
     }
 
     render () { 
-        const { clForm, clInput, clButton, onAddInfo } = this.props;
+        const { clForm, clInput, clButton, onAddInfo, showAllButtons } = this.props;
         return( 
             <form className= { clForm }>
                 <input type="text" className= { clInput } id = { clInput } />
