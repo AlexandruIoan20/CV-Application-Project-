@@ -21,6 +21,7 @@ export default class App extends Component {
 
       notifications: { 
         showConfirmCVSection: false,
+        showPhotoInfoSection: false,
       },
 
       programFunctional: true,
@@ -35,6 +36,15 @@ export default class App extends Component {
     notifications.showConfirmCVSection = false;
 
     this.setState({ ...this.state, showAllButtons, notifications, programFunctional });
+  }
+
+  handlerShowPhotoInfo = () => { 
+    const notifications = this.state.notifications;
+    notifications.showPhotoInfoSection = true; 
+
+    const programFunctional = false;
+
+    this.setState( { ...this.state, notifications, programFunctional });
   }
 
   confirmCV = () => { 
@@ -72,7 +82,6 @@ export default class App extends Component {
 
   render() {
     const { showAllButtons, notifications, programFunctional } = this.state;
-    console.log( { programFunctional });
     return (
       <section className='app-container'>
          {showAllButtons &&  <header>
@@ -80,7 +89,11 @@ export default class App extends Component {
         </header> } 
 
         <main className='container'>
-        <IntroSection showAllButtons={showAllButtons}  stopFunctionality =  {programFunctional}/>
+        <IntroSection showAllButtons={showAllButtons} 
+            stopFunctionality = {programFunctional} 
+            showPhotoInfoSection = {this.state.notifications.showPhotoInfoSection}
+            onShowPhotoInfo = {this.handlerShowPhotoInfo}
+            onCancel = {this.cancelEverything }/>
         <ContactSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional}/>
         <AboutSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional} />
         <EducationSection showAllButtons={showAllButtons} stopFunctionality =  {programFunctional}/>
@@ -91,14 +104,17 @@ export default class App extends Component {
           type='reset'
           onClick={ async () => {
              this.confirmCV(); 
-            console.log(this.state);
             }}
           className='submit-cv-button'>Submit CV</button>}
 
         { !programFunctional && notifications.showConfirmCVSection
            && <DoubleCheck onMainFunction = { () => {  this.hideButtons(); } }
-          onCancel = {this.cancelEverything}
-          description = "Are you sure you want to submit the CV?"
+                  onCancel = {this.cancelEverything}
+                  description = "Are you sure you want to submit the CV?"
+                  firstButton = { true }
+                  firstButtonName = 'Yes'
+                  secondButton =  { true }
+                  secondButtonName = "No"
             /> }
 
           {!showAllButtons && 

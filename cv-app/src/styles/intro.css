@@ -12,3 +12,16 @@
 
     row-gap: 1em;
 }
+
+.bonus-info-button { 
+    background-color: #E0E1DD;
+    margin-left: 0.5em;
+    margin-top: 0.4em;
+
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.bonus-info-button:hover, .bonus-info-button:active { 
+    background-color: gray;
+}

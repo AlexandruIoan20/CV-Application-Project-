@@ -9,12 +9,16 @@ export default class IntroSection extends Component {
     }
 
     render() {
-        const { showAllButtons, stopFunctionality } = this.props;
+        const { showAllButtons, stopFunctionality, onShowPhotoInfo, onCancel, showPhotoInfoSection } = this.props;
+
         return (
             <section className="composed-section intro-section">
                 <section className="intro-image-section">
                     <ImageGenerator showAllButtons={showAllButtons}
-                        stopFunctionality={stopFunctionality} />
+                        stopFunctionality={ stopFunctionality }
+                        onShowPhotoInfo = { onShowPhotoInfo } 
+                        showPhotoInfoSection = { showPhotoInfoSection } 
+                        onCancel = { onCancel }/>
                 </section>
 
                 <section className="intro-data-section">

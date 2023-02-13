@@ -6,21 +6,21 @@ export default class DoubleCheck extends Component {
     }
 
     render () { 
-        const { name, description, onMainFunction, onCancel } = this.props;
+        const { description, onMainFunction, onCancel, firstButton, firstButtonName, secondButton, secondButtonName } = this.props;
         return ( 
             <section className='double-check-section'>
-                <p>{ name }</p>
                 <p> { description } </p>
 
-                <button
+                { (firstButton || undefined) && <button
                     type = 'reset'
                     className='double-check-first'
-                    onClick = { () => { onMainFunction ()} }> Yes </button> 
+                    onClick = { () => { onMainFunction ()} }>  {firstButtonName} </button> }
 
+                { (secondButton || undefined) && 
                 <button
                     type = 'reset'
                     className='double-check-second'
-                    onClick = {onCancel}> No </button>
+                    onClick = {onCancel}> { secondButtonName } </button> } 
             </section>
         )
     }
