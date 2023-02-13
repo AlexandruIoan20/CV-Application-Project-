@@ -50,7 +50,7 @@ export default class App extends Component {
     let calculateProgramFunctional;
     const notifications = Object.values(this.state.notifications);
     notifications.forEach(n => { 
-      if(n == true) calculateProgramFunctional = false;
+      if(n === true) calculateProgramFunctional = false;
     })
 
     calculateProgramFunctional = true;
@@ -72,6 +72,7 @@ export default class App extends Component {
 
   render() {
     const { showAllButtons, notifications, programFunctional } = this.state;
+    console.log( { programFunctional });
     return (
       <section className='app-container'>
          {showAllButtons &&  <header>

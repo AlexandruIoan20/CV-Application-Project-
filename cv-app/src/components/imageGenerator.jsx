@@ -26,13 +26,17 @@ export default class ImageGenerator extends Component {
     }
 
     render () { 
-        const { showAllButtons } = this.props;
+        const { showAllButtons, stopFunctionality } = this.props;
         return( 
             <section>
                 <article className="image-holder"><img src= {this.state.image } /></article>
                  {showAllButtons && <button 
                     className="info-field-button change-photo"
-                    onClick= {this.showEditHandler}>Edit</button> }
+                    onClick= { () => { 
+                        if(stopFunctionality) { 
+                            this.showEditHandler();
+                        }
+                    } }>Edit</button> }
                 {this.state.showEdit && <Form clForm = 'info-field-form'
                     clInput = 'info-field-input'
                     clButton = 'info-field-button'
